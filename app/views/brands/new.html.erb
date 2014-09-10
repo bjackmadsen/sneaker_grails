@@ -1,0 +1,26 @@
+<h1>ADD A SHOE BRAND</h1>
+
+<h2>Current brands:</h2>
+
+<% if @brand.errors.any? %>
+	<h3>Please fix these errors:</h3>
+	<ul>
+		<% @brand.errors.full_messages.each do |message| %>
+			<li><%= message %></li>
+		<% end %>
+	</ul>
+<% end %>
+
+<ul>
+	<% @brands.each do |brand| %>
+		<li><%= brand.name %></li>
+	<% end %>
+</ul>
+
+<form action="/brands" method="post">
+<label for="brand_name">Name</label>
+<input id="brand_name" name="brand[name]" type="text" value="<% @brand.name %>">
+<button>Create Brand</button>
+</form>
+
+<p><a href="/brands">Return to home page</a></p>
