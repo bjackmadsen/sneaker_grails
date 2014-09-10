@@ -1,0 +1,9 @@
+development:
+  adapter: postgresql
+  database: grails_development
+
+
+test:
+  adapter: postgresql
+  database: grails_test
+
