@@ -1,6 +1,18 @@
 class StylesController < ApplicationController
-	def index
+	def new
 		@styles = Style.all 
-		render('styles/index.html.erb')
+		@style = Style.new 
+		render('styles/new.html.erb')
+	end
+
+	def create
+		@styles = Style.all 
+		@style = Style.new(params[:style])
+		if @style.save
+			flash[:notice] = "The shoe style has been added!"
+			redirect_to('/styles')
+		else
+			render('/styles/new.html.erb')
+		end
 	end
 end
