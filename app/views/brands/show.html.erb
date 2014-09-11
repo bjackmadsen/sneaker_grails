@@ -1,0 +1,7 @@
+<h1><%= @brand.name %></h1>
+
+<p><a href="/brands/<%= @brand.id %>"
+      data-confirm="Are you sure you would like to delete <%= @brand.name %>?"
+      data-method="delete"
+      rel="nofollow">Delete</a></p>
+<p><a href="/brands">Return to brand listing</a></p>

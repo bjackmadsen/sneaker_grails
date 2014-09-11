@@ -20,5 +20,17 @@ class BrandsController < ApplicationController
 			render('/brands/new.html.erb')
 		end
 	end
+
+	def show
+		@brands = Brand.all 
+		@brand = Brand.find(params[:id])
+		render('brands/show.html.erb')
+	end
+
+	def destroy
+		@brand = Brand.find(params[:id])
+		@brand.destroy
+		render('brands/destroy.html.erb')
+	end
 end
 
