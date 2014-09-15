@@ -36,6 +36,12 @@ class StylesController < ApplicationController
       		redirect_to("/styles/#{@style.id}")
     	else
       		render("styles/edit.html.erb")
+      	end
     end
-  end
+
+    def destroy
+    	@style = Style.find(params[:id])
+    	@style.destroy
+    	render('styles/destroy.html.erb')
+    end
 end

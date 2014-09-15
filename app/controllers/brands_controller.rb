@@ -22,6 +22,7 @@ class BrandsController < ApplicationController
 	end
 
 	def show
+		@styles = Style.all 
 		@brands = Brand.all 
 		@brand = Brand.find(params[:id])
 		render('brands/show.html.erb')

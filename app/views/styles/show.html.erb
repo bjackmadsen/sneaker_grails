@@ -8,5 +8,10 @@
 
 <a href="/styles/<%= @style.id %>/edit"><button>Edit</button></a>
 
+<p><a href="/styles/<%= @style.id %>"
+      data-confirm="Are you sure you want to delete <%= @style.name %>?"
+      data-method="delete"
+      rel="nofollow">Delete</a></p>
+
 <p><a href="/brands">Return to home page</a></p>
 

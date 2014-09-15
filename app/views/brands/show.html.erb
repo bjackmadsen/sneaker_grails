@@ -1,7 +1,15 @@
 <h1><%= @brand.name %></h1>
 
+<ul>
+	<% @brand.styles.each do |style| %>
+		<li><a href="/styles/<%= style.id %>"><%= style.name %></a></li>
+	<% end %>
+</ul>
+
+<a href="/styles/new"><button>Add a new style</button></a>
+
 <p><a href="/brands/<%= @brand.id %>"
-      data-confirm="Are you sure you want to delete <%= @brand.name %>?"
+      data-confirm="Are you sure you want to delete <%= @brand.name %>, and all of it's styles?"
       data-method="delete"
-      rel="nofollow">Delete</a></p>
+      rel="nofollow">Delete this Brand</a></p>
 <p><a href="/brands">Return to brand listing</a></p>
