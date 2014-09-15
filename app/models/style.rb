@@ -5,4 +5,5 @@ class Style < ActiveRecord::Base
 	validates :price, :presence => true
 	validates :content, :presence => true
 	validates :brand_id, :presence => true
+	belongs_to :brand 
 end

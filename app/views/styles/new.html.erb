@@ -11,32 +11,30 @@
 
 <ul>
 	<% @styles.each do |style| %>
-		<li><%= style.name %></li>
+		<li><a href="/styles/<%= style.id %>"><%= style.name %></a></li>
 	<% end %>
 </ul>
 	
 <form action="/styles" method="post">
-	<input name="_method" type="hidden" value="patch">
 	<label>Choose a Brand</label>
 	
-	<select name="style[brand.id]">
+	<select name="new_style[brand_id]">
 		<% @brands.each do |brand| %>
 			<option value="<%= brand.id %>"><%= brand.name %></option>
 		<% end %>
 	</select><br>
 
 	<label for="style_name">Style Name:</label>
-	<input id="style_name" name="update_style[name]" type="text" value="<% @style.name %>"><br>
+	<input id="style_name" name="new_style[name]" type="text" value="<% @style.name %>"><br>
 	<label for="style_color">Color:</label>
-	<input id="style_color" name="update_style[color]" type="text" value="<% @style.color %>"><br>
+	<input id="style_color" name="new_style[color]" type="text" value="<% @style.color %>"><br>
 	<label for="style_release_date">Release Date:</label>
-	<input id="style_release_date" name="update_style[release_date]" type="text" value="<% @style.release_date %>"><br>
+	<input id="style_release_date" name="new_style[release_date]" type="text" value="<% @style.release_date %>"><br>
 	<label for="style_price">Average Selling Price:</label>
-	<input id="style_price" name="update_style[price]" type="text" value="<% @style.price %>"><br>
+	<input id="style_price" name="new_style[price]" type="text" value="<% @style.price %>"><br>
 	<label for="style_content">Info:</label>
-	<input id="style_content" name="update_style[content]" type="text" value="<% @style.content %>"><br>
+	<input id="style_content" name="new_style[content]" type="text" value="<% @style.content %>"><br>
+  	<button>ADD</button>
 </form>
 
-<form action="/styles/" method="get">
-  <button>ADD</button>
-</form>
+<p><a href="/brands">Return to home page</a></p>

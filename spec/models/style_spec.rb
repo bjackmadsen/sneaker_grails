@@ -7,4 +7,5 @@ describe Style do
 	it { should validate_presence_of :price }
 	it { should validate_presence_of :content }
 	it { should validate_presence_of :brand_id }
+	it { should belong_to :brand }
 end
