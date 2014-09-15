@@ -22,4 +22,20 @@ class StylesController < ApplicationController
 		@style = Style.find(params[:id])
 		render('styles/show.html.erb')
 	end
+
+	def edit
+		@brands = Brand.all 
+		@styles = Style.all 
+		@style = Style.find(params[:id])
+		render('styles/edit.html.erb')
+	end
+
+	def update
+    	@style = Style.find(params[:id])
+    	if @style.update(params[:update_style])
+      		redirect_to("/styles/#{@style.id}")
+    	else
+      		render("styles/edit.html.erb")
+    end
+  end
 end

@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   match('styles/new', {:via => :get, :to => 'styles#new'})
   match('styles', {:via => :post, :to => 'styles#create'})
   match('styles/:id', {:via => :get, :to => 'styles#show'})
+  match('styles/:id/edit', {:via => :get, :to => 'styles#edit'})
+  match('styles/:id', {:via => :post, :to => 'styles#update'})
 end

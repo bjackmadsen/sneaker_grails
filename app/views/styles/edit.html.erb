@@ -1,0 +1,40 @@
+<h1><%= @style.brand.name %></h1>
+
+<h2><%= @style.name %></h2>
+<p>Color: <%= @style.color %></p>
+<p>Release Date: <%= @style.release_date %></p>
+<p>Average Selling Price: <%= @style.price %></p>
+<p>Info: <%= @style.content %></p>
+
+<% if @style.errors.any? %>
+	<h3>Please fix these errors:</h3>
+	<ul>
+		<% @style.errors.full_messages.each do |message| %>
+			<li><%= message %></li>
+		<% end %>
+	</ul>
+<% end %>
+
+<form action="/styles/<%= @style.id %>" method="post">
+	<label>Choose a Brand</label>
+	
+	<select name="update_style[brand_id]">
+		<% @brands.each do |brand| %>
+			<option value="<%= brand.id %>"><%= brand.name %></option>
+		<% end %>
+	</select><br>
+
+	<label for="style_name">Style Name:</label>
+	<input id="style_name" name="update_style[name]" type="text" value="<% @style.name %>"><br>
+	<label for="style_color">Color:</label>
+	<input id="style_color" name="update_style[color]" type="text" value="<% @style.color %>"><br>
+	<label for="style_release_date">Release Date:</label>
+	<input id="style_release_date" name="update_style[release_date]" type="text" value="<% @style.release_date %>"><br>
+	<label for="style_price">Average Selling Price:</label>
+	<input id="style_price" name="update_style[price]" type="text" value="<% @style.price %>"><br>
+	<label for="style_content">Info:</label>
+	<input id="style_content" name="update_style[content]" type="text" value="<% @style.content %>"><br>
+  	<button>UPDATE</button>
+</form>
+
+<p><a href="/brands">Return to home page</a></p>
