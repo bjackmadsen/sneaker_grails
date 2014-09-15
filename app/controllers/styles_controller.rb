@@ -6,6 +6,7 @@ class StylesController < ApplicationController
 	end
 
 	def create
+		@brands = Brand.all 
 		@styles = Style.all 
 		@style = Style.new(params[:style])
 		if @style.save
