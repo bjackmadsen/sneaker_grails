@@ -14,8 +14,8 @@ class BrandsController < ApplicationController
 		@brands = Brand.all 
 		@brand = Brand.new(params[:brand])
 		if @brand.save
-			flash[:notice] = "The shoe brand has been added!"
-			redirect_to('/brands')
+			flash[:notice] = "New brand added!"
+			redirect_to('/brands/new')
 		else
 			render('/brands/new.html.erb')
 		end

@@ -2,14 +2,7 @@
 
 <h2>Current brands:</h2>
 
-<% if @brand.errors.any? %>
-	<h3>Please fix these errors:</h3>
-	<ul>
-		<% @brand.errors.full_messages.each do |message| %>
-			<li><%= message %></li>
-		<% end %>
-	</ul>
-<% end %>
+<%= render('layouts/errors', :object => @brand) %>
 
 <ul>
 	<% @brands.each do |brand| %>
@@ -23,4 +16,4 @@
 <button>Create Brand</button>
 </form>
 
-<p><a href="/brands">Return to home page</a></p>
+<p><a href="/">Return home</a></p>

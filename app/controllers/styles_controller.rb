@@ -11,7 +11,7 @@ class StylesController < ApplicationController
 		@styles = Style.all 
 		@style = Style.new(params[:style])
 		if @style.save
-			flash[:notice] = "The shoe style has been added!"
+			flash[:notice] = "New style added!"
 			redirect_to('/styles/new')
 		else
 			render('/styles/new.html.erb')
@@ -31,6 +31,7 @@ class StylesController < ApplicationController
 	end
 
 	def update
+		@brands = Brand.all 
     	@style = Style.find(params[:id])
     	if @style.update(params[:style])
       		redirect_to("/styles/#{@style.id}")

@@ -1,13 +1,6 @@
 <h1>ADD A SHOE STYLE</h1>
 
-<% if @style.errors.any? %>
-	<h3>Please fix these errors:</h3>
-	<ul>
-		<% @style.errors.full_messages.each do |message| %>
-			<li><%= message %></li>
-		<% end %>
-	</ul>
-<% end %>
+<%= render('layouts/errors', :object => @style) %>
 
 <ul>
 	<% @styles.each do |style| %>
