@@ -9,7 +9,7 @@ class StylesController < ApplicationController
 	def create
 		@brands = Brand.all 
 		@styles = Style.all 
-		@style = Style.new(params[:new_style])
+		@style = Style.new(params[:style])
 		if @style.save
 			flash[:notice] = "The shoe style has been added!"
 			redirect_to('/styles/new')
@@ -32,7 +32,7 @@ class StylesController < ApplicationController
 
 	def update
     	@style = Style.find(params[:id])
-    	if @style.update(params[:update_style])
+    	if @style.update(params[:style])
       		redirect_to("/styles/#{@style.id}")
     	else
       		render("styles/edit.html.erb")

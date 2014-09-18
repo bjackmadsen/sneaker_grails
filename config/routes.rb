@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   match('styles', {:via => :post, :to => 'styles#create'})
   match('styles/:id', {:via => :get, :to => 'styles#show'})
   match('styles/:id/edit', {:via => :get, :to => 'styles#edit'})
-  match('styles/:id', {:via => :post, :to => 'styles#update'})
+  match('styles/:id', {:via => [:patch, :put], :to => 'styles#update'})
   match('styles/:id', {:via => :delete, :to => 'styles#destroy'})
 end
