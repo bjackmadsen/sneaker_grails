@@ -1,15 +1,16 @@
-<h1>ADD A SHOE STYLE</h1>
+<h1>ADD A GRAIL</h1>
 
 <%= render('layouts/errors', :object => @style) %>
 
+<h3>Current grails:</h3>
 <ul>
 	<% @styles.each do |style| %>
 		<li><a href="/styles/<%= style.id %>"><%= style.name %></a></li>
 	<% end %>
 </ul>
 
-<form action="/styles/<%= @style.id %>" method="post">
+<form role="form" action="/styles/<%= @style.id %>" method="post">
   <%= render('form') %>
-  <button>Add</button>
+  <button class="btn btn-primary btn">Add</button>
 </form>
 	

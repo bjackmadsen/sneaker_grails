@@ -1,15 +1,18 @@
 <h1><%= @brand.name %></h1>
 
+<h4>List of grails:</h4>
 <ul>
 	<% @brand.styles.each do |style| %>
 		<li><a href="/styles/<%= style.id %>"><%= style.name %></a></li>
 	<% end %>
 </ul>
 
-<a href="/styles/new"><button>Add a new style</button></a>
-
-<p><a href="/brands/<%= @brand.id %>"
+<div class="row">
+  <div class="col-md-1"><a href="/styles/new" class="btn btn-primary btn">Add a grail</a></div><br><br>
+  <div class="col-md-1"><p><a href="/brands/<%= @brand.id %>"
       data-confirm="Are you sure you want to delete <%= @brand.name %>, and all of it's styles?"
       data-method="delete"
-      rel="nofollow">Delete this Brand</a></p>
-<p><a href="/">Return to brand listing</a></p>
+      rel="nofollow" class="btn btn-danger btn">Delete this Brand</a></p></div>
+</div>
+
+<p><a href="/">Return home</a></p>

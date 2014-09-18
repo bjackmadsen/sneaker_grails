@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails'
 gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
 gem 'pg'
 gem 'sass-rails'
 gem 'uglifier'

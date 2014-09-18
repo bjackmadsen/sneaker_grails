@@ -6,16 +6,25 @@
 	<% end %>
 </select><br>
 
-<label for="style_name">Style Name:</label>
-<input id="style_name" name="style[name]" type="text" value="<%= @style.name %>"><br>
-<label for="style_color">Color:</label>
-<input id="style_color" name="style[color]" type="text" value="<%= @style.color %>"><br>
-<label for="style_release_date">Release Date:</label>
-<input id="style_release_date" name="style[release_date]" type="text" value="<%= @style.release_date %>"><br>
-<label for="style_price">Average Selling Price:</label>
-<input id="style_price" name="style[price]" type="text" value="<%= @style.price %>"><br>
-<label for="style_content">Info:</label>
-<input id="style_content" name="style[content]" type="text" value="<%= @style.content %>"><br>
+<div class="form-group">
+	<label for="style_name">Grail name</label>
+	<input id="style_name" name="style[name]" type="text" class="form-control" placeholder="Enter name" value="<%= @style.name %>">
+</div>
+<div class="form-group">
+	<label for="style_color">Grail colorway</label>
+	<input id="style_color" name="style[color]" type="text" class="form-control" placeholder="Enter colorway" value="<%= @style.color %>">
+</div>
+<div class="form-group">
+	<label for="style_release_date">Release date</label>
+	<input id="style_release_date" name="style[release_date]" type="text" class="form-control" placeholder="Enter release date" value="<%= @style.release_date %>">
+</div>
+<div class="form-group">
+	<label for="style_price">Average selling price</label>
+	<input id="style_price" name="style[price]" type="text" class="form-control" placeholder="Enter Price" value="<%= @style.price %>">
+</div>
+<div class="form-group">
+	<label for="style_content">About grail</label>
+	<input id="style_content" name="style[content]" type="text" class="form-control" placeholder="Add info" value="<%= @style.content %>">
+</div>
 
-
-<p><a href="/">Return to home page</a></p>
+<p><a href="/">Return home</a></p>

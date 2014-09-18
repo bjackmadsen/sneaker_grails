@@ -2,8 +2,8 @@
 
 <%= render('layouts/errors', :object => @style) %>
 
-<form action="/styles/<%= @style.id %>" method="post">
+<form role="form" action="/styles/<%= @style.id %>" method="post">
   <input name="_method" type="hidden" value="patch">
   <%= render('form') %>
-  <button>Update</button>
+  <button class="btn btn-success btn">Update</button>
 </form>
