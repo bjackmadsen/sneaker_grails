@@ -6,13 +6,11 @@
 <p>Average Selling Price: <%= @style.price %></p>
 <p>Info: <%= @style.content %></p>
 
-<div class="row">
-<div class="col-md-1"><a href="/styles/<%= @style.id %>/edit" class="btn btn-success btn">Edit</a></div>
-<div class="col-md-1"><p><a href="/styles/<%= @style.id %>"
+<p><a href="/styles/<%= @style.id %>/edit" class="btn btn-success btn">Edit</a></p>
+<p><a href="/styles/<%= @style.id %>"
       data-confirm="Are you sure you want to delete <%= @style.name %>?"
       data-method="delete"
-      rel="nofollow" class="btn btn-danger btn">Delete</a></p></div>
-</div>
+      rel="nofollow" class="btn btn-danger btn">Delete</a></p>
 
 <p><a href="/">Return home</a></p>
 

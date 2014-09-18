@@ -7,12 +7,11 @@
 	<% end %>
 </ul>
 
-<div class="row">
-  <div class="col-md-1"><a href="/styles/new" class="btn btn-primary btn">Add a grail</a></div><br><br>
-  <div class="col-md-1"><p><a href="/brands/<%= @brand.id %>"
+<p><a href="/styles/new" class="btn btn-success btn">Add a grail</a></p>
+<p><a href="/brands/<%= @brand.id %>"
       data-confirm="Are you sure you want to delete <%= @brand.name %>, and all of it's styles?"
       data-method="delete"
-      rel="nofollow" class="btn btn-danger btn">Delete this Brand</a></p></div>
-</div>
+      rel="nofollow" class="btn btn-primary btn">Delete this Brand</a></p>
+
 
 <p><a href="/">Return home</a></p>
