@@ -39,7 +39,7 @@ It should now be available at `localhost:3000`.
 Alternatively, the live app is on [Heroku](http://sneaker-grails.herokuapp.com/).
 
 ##Author
-[Brandon Madsen]
+Brandon Madsen
 
 ##License
 MIT
