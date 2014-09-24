@@ -1,9 +1,11 @@
 development:
   adapter: postgresql
+  encoding: unicode
   database: grails_development
 
 
 test:
   adapter: postgresql
+  encoding: unicode
   database: grails_test
 

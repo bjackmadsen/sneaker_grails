@@ -1,0 +1,1 @@
+web: bundle exec grails -p $PORT -c ./config/application.rb
