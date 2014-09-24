@@ -1,28 +1,45 @@
-== README
+#Grails
+Grails lets users add and catalog their all time favorite Sneakers.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The project is for the [minimal magic rails assesment] (http://www.learnhowtoprogram.com/lessons/conventional-rails-assessment) for [Epicodus](http://www.epicodus.com/).
 
-Things you may want to cover:
+##Setup
+In your terminal, clone this repo:
 
-* Ruby version
+```console
+$ clone https://github.com/bjackmadsen/grails.git
+```
 
-* System dependencies
+Make sure you've installed [postgres](http://www.postgresql.org/download/) and have started the server:
 
-* Configuration
+```console
+$ postgres
+```
 
-* Database creation
+Install all the dependencies:
 
-* Database initialization
+```console
+$ bundle install
+```
 
-* How to run the test suite
+Set up the databases on your local machine:
 
-* Services (job queues, cache servers, search engines, etc.)
+```console
+$ rake db:create
+$ rake db:schema:load
+```
 
-* Deployment instructions
+Finally, start the rails server:
 
-* ...
+```console
+$ rails s
+```
+It should now be available at `localhost:3000`.
 
+Alternatively, the live app is on [Heroku](http://sneaker-grails.herokuapp.com/).
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+##Author
+[Brandon Madsen]
+
+##License
+MIT
