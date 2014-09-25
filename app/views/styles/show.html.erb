@@ -6,11 +6,14 @@
 <p>Average Selling Price: <%= @style.price %></p>
 <p>Info: <%= @style.content %></p>
 
-<p><a href="/styles/<%= @style.id %>/edit" class="btn btn-success btn">Edit</a></p>
-<p><a href="/styles/<%= @style.id %>"
-      data-confirm="Are you sure you want to delete <%= @style.name %>?"
-      data-method="delete"
-      rel="nofollow" class="btn btn-danger btn">Delete</a></p>
 
-<p><a href="/">Return home</a></p>
+<p><%= link_to "Edit", edit_style_path(@style), :class => "btn btn-success btn" %></p>
+<p><%= link_to "Delete", style_path(@style), :class => "btn btn-danger btn",
+                                          :data => {
+                                          :confirm => "Are you sure you want to delete #{@style.name}?",
+                                          :method => "delete"
+                                          } %></p>
+
+<p><%= link_to "Return home", brands_path %></p>
+
 

@@ -5,7 +5,7 @@
 <h3>Current grails:</h3>
 <ul>
 	<% @styles.each do |style| %>
-		<li><a href="/styles/<%= style.id %>"><%= style.name %></a></li>
+		<li><%= link_to style.name, style_path(style) %></li>
 	<% end %>
 </ul>
 
@@ -13,4 +13,4 @@
   <%= render('form') %>
   <button class="btn btn-primary btn">Add</button>
 </form>
-	
+
