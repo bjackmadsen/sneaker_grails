@@ -3,15 +3,15 @@
 <h4>List of grails:</h4>
 <ul>
 	<% @brand.styles.each do |style| %>
-		<li><a href="/styles/<%= style.id %>"><%= style.name %></a></li>
+		<li><%= link_to style.name, style_path(style) %></li>
 	<% end %>
 </ul>
 
-<p><a href="/styles/new" class="btn btn-success btn">Add a grail</a></p>
-<p><a href="/brands/<%= @brand.id %>"
-      data-confirm="Are you sure you want to delete <%= @brand.name %>, and all of it's styles?"
-      data-method="delete"
-      rel="nofollow" class="btn btn-primary btn">Delete this Brand</a></p>
+<p><%= link_to "Add a grail", new_style_path, :class => "btn btn-success btn" %></p>
+<p><%= link_to "Delete this Brand", brand_path(@brand), :class => "btn btn-primary btn",
+                                                        :data => {
+                                                        :confirm => "Are you sure you want to delete #{@brand.name}, and all of it's styles?",
+                                                        :method => "delete"
+                                                        }%></p>
 
-
-<p><a href="/">Return home</a></p>
+<p><%= link_to "Return home", brands_path %></p>
