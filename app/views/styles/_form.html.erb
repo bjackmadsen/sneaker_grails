@@ -1,3 +1,5 @@
+<%= render('layouts/errors', :object => @style) %>
+
 <label>Choose a Brand</label>
 
 <select name="style[brand_id]">
@@ -6,25 +8,29 @@
 	<% end %>
 </select><br>
 
-<div class="form-group">
-	<label for="style_name">Grail name</label>
-	<input id="style_name" name="style[name]" type="text" class="form-control" placeholder="Enter name" value="<%= @style.name %>">
-</div>
-<div class="form-group">
-	<label for="style_color">Grail colorway</label>
-	<input id="style_color" name="style[color]" type="text" class="form-control" placeholder="Enter colorway" value="<%= @style.color %>">
-</div>
-<div class="form-group">
-	<label for="style_release_date">Release date</label>
-	<input id="style_release_date" name="style[release_date]" type="text" class="form-control" placeholder="Enter release date" value="<%= @style.release_date %>">
-</div>
-<div class="form-group">
-	<label for="style_price">Average selling price</label>
-	<input id="style_price" name="style[price]" type="text" class="form-control" placeholder="Enter Price" value="<%= @style.price %>">
-</div>
-<div class="form-group">
-	<label for="style_content">About grail</label>
-	<input id="style_content" name="style[content]" type="text" class="form-control" placeholder="Add info" value="<%= @style.content %>">
-</div>
+<%= form_for(@style) do |f| %>
+	<div class="form-group">
+		<%= f.label :name %>
+		<%= f.text_field :name, :class => "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= f.label :color %>
+		<%= f.text_field :color, :class => "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= f.label :release_date %>
+		<%= f.text_field :release_date, :class => "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= f.label :price %>
+		<%= f.text_field :price, :class => "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= f.label :content %>
+		<%= f.text_field :content, :class => "form-control" %>
+	</div>
+	<%= f.submit(:class => "btn btn-success btn") %>
+<% end %>
 
 <p><%= link_to "Return home", brands_path %></p>
+
