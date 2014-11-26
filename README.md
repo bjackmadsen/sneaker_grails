@@ -1,4 +1,4 @@
-#Grails
+#Sneaker Grails
 Grails lets users add and catalog their all time favorite Sneakers.
 
 The project is for the [minimal magic rails assesment] (http://www.learnhowtoprogram.com/lessons/conventional-rails-assessment) for [Epicodus](http://www.epicodus.com/).
