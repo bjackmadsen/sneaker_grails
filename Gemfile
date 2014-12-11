@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails'
+gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'pg'
@@ -10,6 +11,7 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'factor'
+gem 'aws-sdk'
 
 group :development do 
 	gem 'better_errors'

@@ -1,10 +1,12 @@
 <h1><%= @style.brand.name %></h1>
 
 <h2><%= @style.name %></h2>
+<%= image_tag @style.photo.url(:medium) %>
 <p>Color: <%= @style.color %></p>
 <p>Release Date: <%= @style.release_date %></p>
 <p>Average Selling Price: <%= @style.price %></p>
 <p>Info: <%= @style.content %></p>
+
 
 
 <p><%= link_to "Edit", edit_style_path(@style), :class => "btn btn-success btn" %></p>

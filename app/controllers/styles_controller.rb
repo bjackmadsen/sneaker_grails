@@ -30,7 +30,7 @@ class StylesController < ApplicationController
 	def update
 		@brands = Brand.all
     	@style = Style.find(params[:id])
-    	if @style.update(params[:style])
+    	if @style.save(params[:style])
       		redirect_to style_path(@style)
     	else
       		render 'edit'
