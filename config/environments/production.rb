@@ -85,8 +85,8 @@ Rails.application.configure do
   :storage => :s3,
   :s3_credentials => {
     :bucket => ENV['S3_sneaker-pics'],
-    :access_key_id => ENV['AKIAJHF4IWTKMQF7A2CQ'],
-    :secret_access_key => ENV['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']
+    :access_key_id => ENV[''],
+    :secret_access_key => ENV['']
   }
 }
 end
