@@ -18,3 +18,4 @@
 # Ignore credentials file.
 /workflows/credentials.yml
 /config/environments/production.rb
+/config/secrets.yml
