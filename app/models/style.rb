@@ -6,8 +6,8 @@ class Style < ActiveRecord::Base
 	validates :content, :presence => true
 	validates :brand_id, :presence => true
 	has_attached_file :photo, :styles => { :medium => "900x600" },
-					  :url => "/assets/images/:id/:style/:basename.:extension",
-					  :path => ":rails_root/public/assets/images/:id/:style/:basename.:extension"
+					  :url => ":s3_domain_url",
+					  :path => "/:class/:attachment/:id_partition/:style/:filename"
 	validates_attachment_presence :photo
 	validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png']
 	belongs_to :brand 
