@@ -10,9 +10,5 @@ class Style < ActiveRecord::Base
 					  :path => ":rails_root/public/assets/images/:id/:style/:basename.:extension"
 	validates_attachment_presence :photo
 	validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png']
-	attr_accessor :photo_file_name
-	attr_accessor :photo_content_type
-	attr_accessor :photo_file_size
-	attr_accessor :photo_updated_at
 	belongs_to :brand 
 end
