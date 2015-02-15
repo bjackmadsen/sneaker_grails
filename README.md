@@ -1,7 +1,7 @@
 #Sneaker Grails
 Sneaker grails lets users add and catalog their all time favorite Sneakers.
 
-The project is for the [minimal magic rails assesment] (http://www.learnhowtoprogram.com/lessons/conventional-rails-assessment) for [Epicodus](http://www.epicodus.com/).
+The project is for the [minimal magic ruby rails assesment] (http://www.learnhowtoprogram.com/lessons/conventional-rails-assessment) for [Epicodus](http://www.epicodus.com/).
 
 ##Setup
 In your terminal, clone this repo:
